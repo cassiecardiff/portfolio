@@ -1020,19 +1020,21 @@ a.case-card__tag:hover {
 
 .gate-form button {
   padding: var(--space-s) var(--space-m);
-  background: var(--sky-ink);
+  background: var(--ink);
   color: var(--cloud);
   border: none;
   border-radius: var(--radius-m);
   font: inherit;
   font-weight: 600;
   font-size: var(--step--1);
+  letter-spacing: 0.02em;
   cursor: pointer;
   transition: background var(--dur-fast) var(--ease-out);
 }
 
-.gate-form button:hover {
-  background: var(--ink);
+.gate-form button:hover,
+.gate-form button:focus-visible {
+  background: var(--ink-soft);
 }
 
 .gate-error {
