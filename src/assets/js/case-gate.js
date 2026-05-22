@@ -36,6 +36,12 @@
 
   const overlay = document.createElement("div");
   overlay.className = "gate-overlay";
+  // Inline styles act as a safety net in case the CSS hasn't loaded yet
+  // or has been cached. The full styling comes from components.css.
+  overlay.style.cssText =
+    "position:fixed;inset:0;background:#f4efe6;z-index:1000;" +
+    "display:flex;align-items:center;justify-content:center;" +
+    "padding:1.5rem;overflow-y:auto;";
   overlay.innerHTML = `
     <form class="gate-form" aria-labelledby="gate-title">
       <span class="eyebrow">Protected</span>
