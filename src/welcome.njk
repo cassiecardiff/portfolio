@@ -1,0 +1,51 @@
+---
+layout: layouts/base.njk
+permalink: /welcome/
+title: I got married
+description: Cassandra Cardiff is now Cassandra Christodolo. Welcome to the new site.
+eleventyExcludeFromCollections: true
+---
+
+<section class="welcome">
+  <span class="eyebrow welcome__eyebrow">Welcome</span>
+
+  <p class="welcome__line welcome__line--old">
+    I used to be <span class="welcome__name">Cassandra <span class="welcome__strike">Cardiff</span></span>.
+  </p>
+
+  <p class="welcome__line welcome__line--new">
+    Now I'm <span class="welcome__name welcome__name--new">Cassandra Christodolo</span>.
+  </p>
+
+  <p class="welcome__heart" aria-hidden="true">
+    <svg viewBox="0 0 24 24" width="22" height="22">
+      <path d="M12 21s-7-4.35-9.5-9C0.94 8.7 2.4 4.6 6.2 4.6c2.1 0 3.6 1.2 4.4 2.7 0.8-1.5 2.3-2.7 4.4-2.7 3.8 0 5.26 4.1 3.7 7.4-2.5 4.65-9.5 9-9.5 9z"
+            fill="none" stroke="#9c5751" stroke-width="1.6" stroke-linejoin="round"/>
+    </svg>
+  </p>
+
+  <p class="welcome__sub">A new name, a new site.</p>
+
+  <p class="welcome__continue">
+    <a href="/" class="welcome__link">Continue to my site &rarr;</a>
+  </p>
+</section>
+
+<script>
+  // Auto-forward to the homepage after the animation has finished.
+  // Skipped if the visitor prefers reduced motion or clicks the link first.
+  (function () {
+    const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const delay = prefersReduced ? 1500 : 6000;
+    let cancelled = false;
+
+    const link = document.querySelector(".welcome__link");
+    if (link) {
+      link.addEventListener("click", () => { cancelled = true; });
+    }
+
+    setTimeout(() => {
+      if (!cancelled) window.location.replace("/");
+    }, delay);
+  })();
+</script>
