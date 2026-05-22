@@ -1,0 +1,33 @@
+<svg viewBox="0 0 80 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="plinth-building-stone" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#f7f4ee"/>
+      <stop offset="100%" stop-color="#e8e1d4"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Classical museum building sitting on the plinth (base step bottom at y=44).
+       Hover lift raises it above the cap. -->
+  <g class="float-on-hover">
+    <!-- pediment -->
+    <path d="M20 21 L40 9 L60 21 Z" fill="#c9dceb" stroke="#2c4b63" stroke-width="1.2"/>
+    <!-- entablature -->
+    <rect x="20" y="21" width="40" height="4" fill="#c9dceb" stroke="#2c4b63" stroke-width="1"/>
+    <!-- columns -->
+    <rect x="24" y="25" width="3" height="16" fill="#c9dceb" stroke="#2c4b63" stroke-width="1"/>
+    <rect x="33" y="25" width="3" height="16" fill="#c9dceb" stroke="#2c4b63" stroke-width="1"/>
+    <rect x="44" y="25" width="3" height="16" fill="#c9dceb" stroke="#2c4b63" stroke-width="1"/>
+    <rect x="53" y="25" width="3" height="16" fill="#c9dceb" stroke="#2c4b63" stroke-width="1"/>
+    <!-- base step -->
+    <rect x="20" y="41" width="40" height="3" fill="#c9dceb" stroke="#2c4b63" stroke-width="1"/>
+  </g>
+
+  <!-- Plinth -->
+  <g>
+    <rect x="14" y="48" width="52" height="60" fill="url(#plinth-building-stone)" stroke="#a8927a" stroke-width="1"/>
+    <rect x="10" y="44" width="60" height="6" fill="#f7f4ee" stroke="#a8927a" stroke-width="1"/>
+    <rect x="10" y="106" width="60" height="6" fill="#f7f4ee" stroke="#a8927a" stroke-width="1"/>
+    <line x1="22" y1="56" x2="22" y2="100" stroke="#a8927a" stroke-width="0.5" opacity="0.6"/>
+    <line x1="58" y1="56" x2="58" y2="100" stroke="#a8927a" stroke-width="0.5" opacity="0.6"/>
+  </g>
+</svg>

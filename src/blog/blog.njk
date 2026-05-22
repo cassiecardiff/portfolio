@@ -1,0 +1,45 @@
+---
+layout: layouts/base.njk
+permalink: /blog/
+title: Blog
+description: Writing on user research, accessible practice and responsible AI in research.
+---
+
+<section class="wrap section--tight" aria-labelledby="blog-heading">
+  <span class="eyebrow">Writing</span>
+  <h1 id="blog-heading" class="hero__statement">Notes from the field.</h1>
+</section>
+
+<section class="wrap section--tight" aria-label="Blog posts">
+  {% if collections.posts.length %}
+    <ul class="blog-grid unstyled-list">
+      {% for post in collections.posts %}
+        <li>
+          <article class="blog-card">
+            <a class="blog-card__link" href="{{ post.url }}" aria-label="Read {{ post.data.title }}">
+              <p class="blog-card__meta">
+                <time datetime="{{ post.date | htmlDate }}">{{ post.date | readableDate }}</time>
+              </p>
+              <h2 class="blog-card__title">{{ post.data.title }}</h2>
+              {% if post.data.summary %}
+                <p class="blog-card__summary">{{ post.data.summary }}</p>
+              {% endif %}
+              <span class="blog-card__read">Read more &rarr;</span>
+            </a>
+            {% if post.data.tags %}
+              <ul class="blog-card__tags unstyled-list">
+                {% for tag in post.data.tags %}
+                  {% if tag != "post" %}
+                    <li><a class="case-card__tag" href="/tags/{{ tag | slug }}/">{{ tag }}</a></li>
+                  {% endif %}
+                {% endfor %}
+              </ul>
+            {% endif %}
+          </article>
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>New posts are on their way. First one drops soon.</p>
+  {% endif %}
+</section>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <rect width="32" height="32" rx="6" fill="#f4efe6"/>
+  <g fill="none" stroke="#2c4b63" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+    <!-- arch -->
+    <path d="M6 27 L6 15 A10 10 0 0 1 26 15 L26 27"/>
+    <!-- ground line -->
+    <line x1="4" y1="27" x2="28" y2="27"/>
+    <!-- keystone -->
+    <rect x="13" y="3" width="6" height="5" rx="0.5" fill="#f4efe6"/>
+  </g>
+</svg>

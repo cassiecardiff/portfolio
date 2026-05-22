@@ -1,0 +1,16 @@
+<section class="logo-band" aria-labelledby="logo-wall-heading">
+  <div class="wrap logo-band__inner">
+    <h2 id="logo-wall-heading" class="logo-band__title">A few organisations I've worked with</h2>
+    <ul class="logo-band__grid unstyled-list" role="list">
+      {% for logo in logos %}
+        <li class="logo-band__item" style="--logo-scale: {{ logo.scale or 1 }};">
+          {% if logo.file %}
+            <img src="/assets/img/logos/{{ logo.file }}" alt="{{ logo.name }} logo" loading="lazy" class="logo-band__img">
+          {% else %}
+            <span class="logo-band__name" aria-label="{{ logo.name }} logo">{{ logo.name }}</span>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>

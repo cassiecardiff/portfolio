@@ -1,0 +1,54 @@
+<section class="wrap section--tight" aria-label="Client testimonials">
+  <div class="carousel" data-carousel>
+    <div class="carousel__viewport">
+      <ul class="carousel__track unstyled-list" data-carousel-track>
+        {% for t in testimonials %}
+          <li class="carousel__slide{% if loop.first %} is-active{% endif %}"
+              role="group"
+              aria-roledescription="testimonial"
+              aria-label="{{ loop.index }} of {{ testimonials.length }}">
+            <figure class="carousel__quote">
+              <blockquote>
+                <p><span class="carousel__qmark carousel__qmark--open" aria-hidden="true">&ldquo;</span>{{ t.quote }}<span class="carousel__qmark carousel__qmark--close" aria-hidden="true">&rdquo;</span></p>
+              </blockquote>
+              <figcaption class="carousel__cite">
+                <span class="carousel__name">{{ t.name }}</span>
+                <span class="carousel__role">{{ t.role }}</span>
+                {% if t.org %}<span class="carousel__org">{{ t.org }}</span>{% endif %}
+              </figcaption>
+            </figure>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div class="carousel__controls">
+      <button type="button" class="carousel__btn" data-carousel-prev aria-label="Previous testimonial">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" width="20" height="20">
+          <path d="M15 4 L7 12 L15 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+
+      <ol class="carousel__dots unstyled-list" role="tablist" aria-label="Choose a testimonial">
+        {% for t in testimonials %}
+          <li>
+            <button type="button"
+                    class="carousel__dot{% if loop.first %} is-active{% endif %}"
+                    role="tab"
+                    aria-selected="{% if loop.first %}true{% else %}false{% endif %}"
+                    aria-controls="testimonial-{{ loop.index }}"
+                    aria-label="Show testimonial {{ loop.index }}"
+                    data-carousel-go="{{ loop.index0 }}">
+            </button>
+          </li>
+        {% endfor %}
+      </ol>
+
+      <button type="button" class="carousel__btn" data-carousel-next aria-label="Next testimonial">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" width="20" height="20">
+          <path d="M9 4 L17 12 L9 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</section>

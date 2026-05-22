@@ -1,0 +1,76 @@
+---
+layout: layouts/base.njk
+pagination:
+  data: collections
+  size: 1
+  alias: tag
+  filter:
+    - all
+    - post
+    - nav
+    - posts
+permalink: "/tags/{{ tag | slug }}/"
+eleventyComputed:
+  title: "Tagged: {{ tag }}"
+  description: "Blog posts and case studies tagged {{ tag }}."
+---
+
+{% set caseItems = collections[tag] | byUrlPrefix("/work/") %}
+{% set postItems = collections[tag] | byUrlPrefix("/blog/") %}
+
+<section class="wrap section--tight" aria-labelledby="tag-heading">
+  <p><a href="/tags/" class="case-study__back-link">&larr; All tags</a></p>
+  <span class="eyebrow">Tag</span>
+  <h1 id="tag-heading" class="hero__statement">{{ tag }}</h1>
+  <p class="lede">
+    {{ collections[tag].length }} item{% if collections[tag].length != 1 %}s{% endif %} tagged "{{ tag }}".
+  </p>
+</section>
+
+{% if caseItems.length %}
+  <section class="wrap section--tight" aria-labelledby="tag-cases-heading">
+    <h2 id="tag-cases-heading" class="eyebrow">Case studies</h2>
+    <div class="card-grid">
+      {% for item in caseItems %}
+        {% set study = {
+          "slug": item.fileSlug,
+          "title": item.data.title,
+          "summary": item.data.summary,
+          "plinthObject": item.data.plinthObject,
+          "locked": true,
+          "tags": item.data.tags
+        } %}
+        {% include "partials/case-card.njk" %}
+      {% endfor %}
+    </div>
+  </section>
+{% endif %}
+
+{% if postItems.length %}
+  <section class="wrap section--tight" aria-labelledby="tag-posts-heading">
+    <h2 id="tag-posts-heading" class="eyebrow">Blog posts</h2>
+    <ul class="blog-grid unstyled-list">
+      {% for item in postItems %}
+        <li>
+          <article class="blog-card">
+            <a class="blog-card__link" href="{{ item.url }}">
+              <p class="blog-card__meta"><time datetime="{{ item.date | htmlDate }}">{{ item.date | readableDate }}</time></p>
+              <h3 class="blog-card__title">{{ item.data.title }}</h3>
+              {% if item.data.summary %}<p class="blog-card__summary">{{ item.data.summary }}</p>{% endif %}
+              <span class="blog-card__read">Read &rarr;</span>
+            </a>
+            {% if item.data.tags %}
+              <ul class="blog-card__tags unstyled-list">
+                {% for t in item.data.tags %}
+                  {% if t != "post" %}
+                    <li><a class="case-card__tag" href="/tags/{{ t | slug }}/">{{ t }}</a></li>
+                  {% endif %}
+                {% endfor %}
+              </ul>
+            {% endif %}
+          </article>
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
+{% endif %}

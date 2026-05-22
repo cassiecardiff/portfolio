@@ -1,0 +1,20 @@
+{
+  "name": "cassandra-portfolio",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Personal portfolio and blog for Cassandra Christodolo, senior user researcher",
+  "scripts": {
+    "start": "eleventy --serve --quiet",
+    "build": "eleventy",
+    "debug": "DEBUG=Eleventy* eleventy"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy-navigation": "^0.3.5",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
+    "luxon": "^3.4.4"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

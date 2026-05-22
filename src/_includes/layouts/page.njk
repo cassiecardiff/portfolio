@@ -1,0 +1,16 @@
+---
+layout: layouts/base.njk
+---
+<article class="wrap stack-l section">
+  {% if title %}
+    <header class="stack">
+      {% if eyebrow %}<span class="eyebrow">{{ eyebrow }}</span>{% endif %}
+      <h1>{{ title }}</h1>
+      {% if lede %}<p class="lede">{{ lede }}</p>{% endif %}
+    </header>
+  {% endif %}
+
+  <div class="stack">
+    {{ content | safe }}
+  </div>
+</article>

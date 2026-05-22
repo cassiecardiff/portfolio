@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /work/amnesty/
+Disallow: /work/hearing-dogs/
+Disallow: /work/gstt/
+Disallow: /work/start-network/
+Disallow: /work/london-museum/
+Disallow: /work/nms/

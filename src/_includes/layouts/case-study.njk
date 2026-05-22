@@ -1,0 +1,68 @@
+---
+layout: layouts/base.njk
+---
+<article class="case-study">
+  <header class="case-study__hero">
+    <div class="case-study__hero-top">
+      <a href="/work/" class="case-study__back-link">&larr; Back to work</a>
+      <button type="button" class="reveal-toggle" data-toggle-reveal aria-pressed="false">Disable scroll animations</button>
+    </div>
+
+    {% if plinthObject %}
+      <div class="case-study__hero-plinth" aria-hidden="true">
+        {% if plinthObject == "candle" %}
+          {% include "svg/plinth-candle.njk" %}
+        {% elif plinthObject == "dog" %}
+          {% include "svg/plinth-dog.njk" %}
+        {% elif plinthObject == "cross" %}
+          {% include "svg/plinth-cross.njk" %}
+        {% elif plinthObject == "globe" %}
+          {% include "svg/plinth-globe.njk" %}
+        {% elif plinthObject == "building" %}
+          {% include "svg/plinth-building.njk" %}
+        {% elif plinthObject == "thistle" %}
+          {% include "svg/plinth-thistle.njk" %}
+        {% endif %}
+      </div>
+    {% endif %}
+
+    <span class="eyebrow">Case study</span>
+    <h1 class="case-study__title">{{ title }}</h1>
+    <ul class="case-study__tags unstyled-list">
+      {% for tag in tags %}
+        <li><a class="case-card__tag" href="/tags/{{ tag | slug }}/">{{ tag }}</a></li>
+      {% endfor %}
+    </ul>
+    {% if summary %}<p class="case-study__summary">{{ summary }}</p>{% endif %}
+  </header>
+
+  {% if clientQuote %}
+    <section class="case-study__pullquote-section reveal-on-scroll" aria-label="Client testimonial">
+      <figure class="case-study__pullquote">
+        <blockquote>
+          <p>{{ clientQuote.text }}</p>
+        </blockquote>
+        <figcaption class="case-study__pullquote-cite">
+          <span class="case-study__cite-name">{{ clientQuote.name }}</span>
+          {% if clientQuote.role %}<span class="case-study__cite-role">{{ clientQuote.role }}</span>{% endif %}
+          {% if clientQuote.org %}<span class="case-study__cite-org">{{ clientQuote.org }}</span>{% endif %}
+          {% if clientQuote.context %}<span class="case-study__cite-context">{{ clientQuote.context }}</span>{% endif %}
+        </figcaption>
+      </figure>
+    </section>
+  {% endif %}
+
+  {% if lead %}
+    <section class="case-study__lead-section reveal-on-scroll">
+      <p class="case-study__lead">{{ lead }}</p>
+    </section>
+  {% endif %}
+
+  <div class="case-study__body">
+    {{ content | safe }}
+  </div>
+
+  <footer class="case-study__footer">
+    <a href="/work/" class="case-study__back-link">&larr; Back to work</a>
+  </footer>
+</article>

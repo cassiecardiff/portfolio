@@ -1,0 +1,19 @@
+{
+  "title": "Cassandra Christodolo",
+  "tagline": "User experience researcher",
+  "url": "https://cassandrachristodolo.com",
+  "description": "Cassandra Christodolo helps public sector and charity organisations understand the people they serve.",
+  "author": {
+    "name": "Cassandra Christodolo",
+    "short": "Cassie",
+    "email": "cassandra@christodolo.com",
+    "linkedin": "https://www.linkedin.com/in/cassandrachristodolo/"
+  },
+  "nav": [
+    { "label": "Home", "url": "/" },
+    { "label": "Work", "url": "/work/" },
+    { "label": "About", "url": "/about/" },
+    { "label": "Blog", "url": "/blog/" },
+    { "label": "Contact", "url": "/contact/" }
+  ]
+}

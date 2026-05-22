@@ -1,0 +1,21 @@
+---
+layout: layouts/base.njk
+permalink: /work/
+title: Work
+description: Selected user research projects with charities and public sector organisations.
+---
+
+<section class="wrap section--tight" aria-labelledby="work-heading">
+  <span class="eyebrow">Selected work</span>
+  <h1 id="work-heading" class="hero__statement">Research with impact.</h1>
+</section>
+
+<section class="wrap section" aria-labelledby="cases-heading">
+  <h2 id="cases-heading" class="sr-only">Case studies</h2>
+  <div class="card-grid">
+    {% for study in caseStudies %}
+      {% include "partials/case-card.njk" %}
+    {% endfor %}
+  </div>
+  <p class="work-note">Case studies are password protected. <a href="mailto:{{ site.author.email }}?subject=Case%20study%20access">Email me</a> if you'd like access.</p>
+</section>

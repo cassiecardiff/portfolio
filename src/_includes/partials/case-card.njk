@@ -1,0 +1,40 @@
+{# Render a single case study preview card. Expects `study` in scope. #}
+<article class="case-card">
+  <div class="case-card__plinth" aria-hidden="true">
+    {% if study.plinthObject == "candle" %}
+      {% include "svg/plinth-candle.njk" %}
+    {% elif study.plinthObject == "dog" %}
+      {% include "svg/plinth-dog.njk" %}
+    {% elif study.plinthObject == "cross" %}
+      {% include "svg/plinth-cross.njk" %}
+    {% elif study.plinthObject == "globe" %}
+      {% include "svg/plinth-globe.njk" %}
+    {% elif study.plinthObject == "building" %}
+      {% include "svg/plinth-building.njk" %}
+    {% elif study.plinthObject == "thistle" %}
+      {% include "svg/plinth-thistle.njk" %}
+    {% else %}
+      {% include "svg/plinth.njk" %}
+    {% endif %}
+  </div>
+
+  <h3 class="case-card__title">
+    <a class="case-card__title-link" href="/work/{{ study.slug }}/"
+       aria-label="Case study, {{ study.title }}{% if study.locked %}, password protected{% endif %}">{{ study.title }}</a>
+  </h3>
+
+  <p class="case-card__summary">{{ study.summary }}</p>
+
+  {% if study.locked %}
+    <span class="case-card__lock">
+      {% include "svg/lock.njk" %}
+      Password protected
+    </span>
+  {% endif %}
+
+  <ul class="case-card__tags unstyled-list" aria-label="Tags">
+    {% for tag in study.tags %}
+      <li><a class="case-card__tag" href="/tags/{{ tag | slug }}/">{{ tag }}</a></li>
+    {% endfor %}
+  </ul>
+</article>

@@ -1,0 +1,58 @@
+<svg viewBox="0 0 80 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="plinth-cross-stone" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#f7f4ee"/>
+      <stop offset="100%" stop-color="#e8e1d4"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Rod of Asclepius, the medical symbol -->
+  <g class="float-on-hover">
+    <!-- staff -->
+    <rect x="38.5" y="12" width="3" height="34" rx="1" fill="#c9dceb" stroke="#2c4b63" stroke-width="1.2"/>
+    <!-- top knob on the staff -->
+    <circle cx="40" cy="12" r="2.5" fill="#c9dceb" stroke="#2c4b63" stroke-width="1.2"/>
+
+    <!-- snake wrapped around the staff, drawn as a sinuous path -->
+    <path d="M50 15
+             Q44 16 38 20
+             Q32 24 38 28
+             Q44 32 38 36
+             Q32 40 38 44"
+          fill="none"
+          stroke="#2c4b63"
+          stroke-width="1.6"
+          stroke-linecap="round"/>
+    <!-- snake belly highlight in lighter blue, traces the same curve -->
+    <path d="M50 15
+             Q44 16 38 20
+             Q32 24 38 28
+             Q44 32 38 36
+             Q32 40 38 44"
+          fill="none"
+          stroke="#6f93ad"
+          stroke-width="0.8"
+          stroke-linecap="round"
+          opacity="0.7"
+          transform="translate(0,0.6)"/>
+
+    <!-- snake head -->
+    <ellipse cx="50" cy="15" rx="4" ry="2.5" fill="#c9dceb" stroke="#2c4b63" stroke-width="1.2"/>
+    <!-- eye -->
+    <circle cx="51.5" cy="14.5" r="0.6" fill="#2c4b63"/>
+    <!-- forked tongue -->
+    <path d="M54 15 L57 14 M54 15 L57 16" fill="none" stroke="#9c5751" stroke-width="0.7" stroke-linecap="round"/>
+
+    <!-- snake tail tucking behind staff at bottom -->
+    <path d="M38 44 Q36 46 38 47" fill="none" stroke="#2c4b63" stroke-width="1.6" stroke-linecap="round"/>
+  </g>
+
+  <!-- Plinth -->
+  <g>
+    <rect x="14" y="48" width="52" height="60" fill="url(#plinth-cross-stone)" stroke="#a8927a" stroke-width="1"/>
+    <rect x="10" y="44" width="60" height="6" fill="#f7f4ee" stroke="#a8927a" stroke-width="1"/>
+    <rect x="10" y="106" width="60" height="6" fill="#f7f4ee" stroke="#a8927a" stroke-width="1"/>
+    <line x1="22" y1="56" x2="22" y2="100" stroke="#a8927a" stroke-width="0.5" opacity="0.6"/>
+    <line x1="58" y1="56" x2="58" y2="100" stroke="#a8927a" stroke-width="0.5" opacity="0.6"/>
+  </g>
+</svg>

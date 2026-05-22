@@ -1,0 +1,38 @@
+---
+layout: layouts/base.njk
+---
+<article class="case-study post">
+  <header class="case-study__hero">
+    <div class="case-study__hero-top">
+      <a href="/blog/" class="case-study__back-link">&larr; Back to writing</a>
+      <button type="button" class="reveal-toggle" data-toggle-reveal aria-pressed="false">Disable scroll animations</button>
+    </div>
+
+    <span class="eyebrow">Note</span>
+    <h1 class="case-study__title">{{ title }}</h1>
+
+    <p class="post-meta">
+      <time datetime="{{ page.date | htmlDate }}">{{ page.date | readableDate }}</time>
+    </p>
+
+    {% if tags %}
+      <ul class="case-study__tags unstyled-list">
+        {% for tag in tags %}
+          {% if tag != "post" %}
+            <li><a class="case-card__tag" href="/tags/{{ tag | slug }}/">{{ tag }}</a></li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    {% endif %}
+
+    {% if summary %}<p class="case-study__summary">{{ summary }}</p>{% endif %}
+  </header>
+
+  <section class="case-study__section reveal-on-scroll post-body">
+    {{ content | safe }}
+  </section>
+
+  <footer class="case-study__footer">
+    <a href="/blog/" class="case-study__back-link">&larr; Back to writing</a>
+  </footer>
+</article>

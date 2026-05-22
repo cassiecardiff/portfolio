@@ -1,0 +1,31 @@
+---
+layout: layouts/base.njk
+title: ""
+description: "Cassandra Christodolo, user experience researcher. Public sector and charity research, accessible practice, responsible AI."
+eleventyNavigation:
+  key: Home
+  order: 1
+---
+
+{% include "partials/hero.njk" %}
+
+{% include "partials/logo-wall.njk" %}
+
+{% include "partials/quote-carousel.njk" %}
+
+<section class="wrap section" aria-labelledby="work-preview-heading">
+  <div class="section-head">
+    <div>
+      <span class="eyebrow">Selected work</span>
+      <h2 id="work-preview-heading" class="section-head__title">Recent case studies</h2>
+    </div>
+  </div>
+
+  <div class="card-grid">
+    {% for study in caseStudies %}
+      {% include "partials/case-card.njk" %}
+    {% endfor %}
+  </div>
+
+  <p class="work-note">Case studies are password protected. <a href="mailto:{{ site.author.email }}?subject=Case%20study%20access">Email me</a> if you'd like access.</p>
+</section>

@@ -1,0 +1,21 @@
+<form class="filter-group" role="group" aria-label="Filter case studies" data-filter-form>
+  <p class="filter-group__legend">Filter by</p>
+
+  {% for group, tags in taxonomy %}
+    <fieldset class="sr-only">
+      <legend>{{ group | capitalize }}</legend>
+    </fieldset>
+    {% for tag in tags %}
+      <button type="button"
+              class="filter-chip"
+              data-filter
+              data-tag="{{ tag }}"
+              data-group="{{ group }}"
+              aria-pressed="false">
+        {{ tag }}
+      </button>
+    {% endfor %}
+  {% endfor %}
+
+  <button type="reset" class="filter-clear" data-filter-clear hidden>Clear filters</button>
+</form>

@@ -1,0 +1,28 @@
+---
+layout: layouts/base.njk
+permalink: /tags/
+title: Tags
+description: Browse posts and case studies by topic.
+---
+
+<section class="wrap section--tight" aria-labelledby="tags-heading">
+  <span class="eyebrow">Topics</span>
+  <h1 id="tags-heading" class="hero__statement">Browse by tag.</h1>
+  <p class="lede">Pick a topic and you'll see every blog post and case study that touches on it.</p>
+</section>
+
+<section class="wrap section--tight" aria-label="All tags">
+  <ul class="tag-list unstyled-list">
+    {% set ignoredTags = ["all", "post", "nav", "posts", "caseStudies"] %}
+    {% for tagName, items in collections %}
+      {% if tagName not in ignoredTags %}
+        <li>
+          <a class="tag-list__item" href="/tags/{{ tagName | slug }}/">
+            <span class="tag-list__name">{{ tagName }}</span>
+            <span class="tag-list__count">{{ items.length }}</span>
+          </a>
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</section>

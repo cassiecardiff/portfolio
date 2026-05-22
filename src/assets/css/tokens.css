@@ -1,0 +1,111 @@
+/* ============================================================
+   Design tokens
+   Palette: dreamy sky and limestone, Piranesi-inspired but light
+   ============================================================ */
+
+:root {
+  /* ---- Colour ---- */
+  /* Ink (text) */
+  --ink: #1a1f2e;
+  --ink-soft: #4a5468;
+  --ink-quiet: #5b6577; /* 5.1:1 on limestone, safe for body text */
+
+  /* Limestone (surfaces and ground) */
+  --limestone: #f4efe6;
+  --limestone-deep: #e8e1d4;
+  --limestone-shadow: #d6cdbb;
+
+  /* Sky (cool accent) */
+  --sky-pale: #eaf1f6;
+  --sky: #c9dceb;
+  --sky-deep: #6f93ad;
+  --sky-ink: #2c4b63;
+
+  /* Cloud (whites) */
+  --cloud: #fafaf7;
+  --cloud-soft: #f7f4ee;
+
+  /* Rose (warm accent, use sparingly) */
+  --rose: #c97b73;
+  --rose-deep: #9c5751;
+  --rose-pale: #f3dedb;
+
+  /* Functional roles */
+  --bg: var(--limestone);
+  --bg-soft: var(--cloud-soft);
+  --bg-card: var(--cloud);
+  --fg: var(--ink);
+  --fg-soft: var(--ink-soft);
+  --rule: var(--limestone-shadow);
+  --accent: var(--sky-deep);
+  --accent-ink: var(--sky-ink);
+  --accent-warm: var(--rose-deep);
+  --focus: var(--sky-ink);
+
+  /* ---- Type ---- */
+  --font-display: "Yeseva One", Georgia, "Times New Roman", serif;
+  --font-body: "Sora", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  /* Modular scale, ratio 1.25 (major third) */
+  --step--1: clamp(0.875rem, 0.85rem + 0.1vw, 0.9375rem);
+  --step-0: clamp(1rem, 0.96rem + 0.2vw, 1.0625rem);
+  --step-1: clamp(1.125rem, 1.05rem + 0.3vw, 1.25rem);
+  --step-2: clamp(1.3125rem, 1.2rem + 0.5vw, 1.5rem);
+  --step-3: clamp(1.625rem, 1.4rem + 0.9vw, 2rem);
+  --step-4: clamp(2rem, 1.6rem + 1.6vw, 2.75rem);
+  --step-5: clamp(2.5rem, 1.9rem + 2.4vw, 3.75rem);
+  --step-6: clamp(3rem, 2.2rem + 3.2vw, 4.75rem);
+
+  /* ---- Space (a fluid scale) ---- */
+  --space-3xs: clamp(0.25rem, 0.24rem + 0.05vw, 0.3125rem);
+  --space-2xs: clamp(0.5rem, 0.47rem + 0.1vw, 0.625rem);
+  --space-xs: clamp(0.75rem, 0.7rem + 0.2vw, 0.9375rem);
+  --space-s: clamp(1rem, 0.94rem + 0.25vw, 1.25rem);
+  --space-m: clamp(1.5rem, 1.4rem + 0.4vw, 1.875rem);
+  --space-l: clamp(2rem, 1.8rem + 0.8vw, 2.75rem);
+  --space-xl: clamp(3rem, 2.6rem + 1.6vw, 4.25rem);
+  --space-2xl: clamp(4.5rem, 3.8rem + 2.8vw, 6.5rem);
+  --space-3xl: clamp(6rem, 5rem + 4vw, 9rem);
+
+  /* ---- Layout ---- */
+  --measure-narrow: 36rem;
+  --measure: 44rem;
+  --measure-wide: 64rem;
+  --container: 76rem;
+
+  /* ---- Radii ---- */
+  --radius-s: 4px;
+  --radius-m: 10px;
+  --radius-l: 18px;
+  --radius-arch: 50% 50% 4px 4px / 30% 30% 4px 4px;
+
+  /* ---- Shadow (low, soft, dreamy) ---- */
+  --shadow-soft: 0 1px 2px rgba(26, 31, 46, 0.05),
+    0 6px 24px rgba(26, 31, 46, 0.06);
+  --shadow-lift: 0 1px 2px rgba(26, 31, 46, 0.06),
+    0 14px 40px rgba(26, 31, 46, 0.1);
+
+  /* ---- Motion ---- */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast: 180ms;
+  --dur-base: 320ms;
+  --dur-slow: 520ms;
+}
+
+/* Respect reduced motion: turn every animation and transition off. */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dur-fast: 0ms;
+    --dur-base: 0ms;
+    --dur-slow: 0ms;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
