@@ -36,7 +36,7 @@ eleventyExcludeFromCollections: true
   // Skipped if the visitor prefers reduced motion or clicks the link first.
   (function () {
     const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    const delay = prefersReduced ? 1500 : 6000;
+    const delay = prefersReduced ? 3000 : 12000;
     let cancelled = false;
 
     const link = document.querySelector(".welcome__link");
