@@ -1,5 +1,6 @@
-# Netlify config for Cassandra Christodolo's portfolio
-# Eleventy build, password protection on all /work/* case studies
+# Netlify config for Cassandra Christodolo's portfolio.
+# Case studies are password protected via a client side gate
+# in src/assets/js/case-gate.js. No Netlify Identity needed.
 
 [build]
   command = "npm run build"
@@ -16,48 +17,7 @@
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "camera=(), microphone=(), geolocation=()"
 
-# Long cache for static assets
 [[headers]]
   for = "/assets/*"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
-
-# Password protection on every case study.
-# These role rules require Netlify Identity with role based access.
-# Alternative: enable site-wide visitor password in Netlify dashboard
-# and remove these redirects.
-[[redirects]]
-  from = "/work/amnesty/*"
-  to = "/work/amnesty/:splat"
-  status = 200
-  conditions = {Role = ["client", "admin"]}
-
-[[redirects]]
-  from = "/work/hearing-dogs/*"
-  to = "/work/hearing-dogs/:splat"
-  status = 200
-  conditions = {Role = ["client", "admin"]}
-
-[[redirects]]
-  from = "/work/gstt/*"
-  to = "/work/gstt/:splat"
-  status = 200
-  conditions = {Role = ["client", "admin"]}
-
-[[redirects]]
-  from = "/work/start-network/*"
-  to = "/work/start-network/:splat"
-  status = 200
-  conditions = {Role = ["client", "admin"]}
-
-[[redirects]]
-  from = "/work/london-museum/*"
-  to = "/work/london-museum/:splat"
-  status = 200
-  conditions = {Role = ["client", "admin"]}
-
-[[redirects]]
-  from = "/work/nms/*"
-  to = "/work/nms/:splat"
-  status = 200
-  conditions = {Role = ["client", "admin"]}
