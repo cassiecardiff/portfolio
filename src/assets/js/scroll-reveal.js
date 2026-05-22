@@ -24,7 +24,7 @@
     const refresh = () => {
       const isDisabled = document.body.classList.contains("no-scroll-reveal");
       toggle.setAttribute("aria-pressed", isDisabled ? "true" : "false");
-      toggle.textContent = isDisabled ? "Enable scroll animations" : "Disable scroll animations";
+      toggle.textContent = isDisabled ? "Turn on scroll animations" : "Turn off scroll animations";
     };
     refresh();
     toggle.addEventListener("click", () => {
@@ -39,6 +39,17 @@
         });
       }
     });
+
+    // Hide the toggle when there's no scrolling to do (page fits the viewport).
+    // Mobile is already handled by CSS at the 36rem breakpoint.
+    function maybeHideToggle() {
+      if (window.matchMedia("(max-width: 36rem)").matches) return;
+      const hasOverflow = document.documentElement.scrollHeight > window.innerHeight + 16;
+      toggle.style.display = hasOverflow ? "" : "none";
+    }
+    maybeHideToggle();
+    window.addEventListener("resize", maybeHideToggle);
+    window.addEventListener("load", maybeHideToggle);
   }
 
   const targets = document.querySelectorAll(".reveal-on-scroll");
