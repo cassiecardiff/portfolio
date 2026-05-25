@@ -1394,22 +1394,16 @@ a.case-card__tag:hover {
     100% { transform: rotate(0.6deg); }
   }
 
-  /* Clouds drift when the illustration is hovered or tap-activated.
-     Using play-state means clouds hold position when not active
-     instead of snapping back to the start. */
+  /* Clouds drift on hover or tap. No animation defined by default so
+     they stop cleanly when the interaction ends. */
   @keyframes cloud-drift {
     from { transform: translateX(0); }
     to   { transform: translateX(-480px); }
   }
 
-  .cloud-track {
-    animation: cloud-drift 20s linear infinite;
-    animation-play-state: paused;
-  }
-
   .hero__illustration:hover .cloud-track,
   .hero__illustration:focus-within .cloud-track,
   .hero__illustration.is-touch-active .cloud-track {
-    animation-play-state: running;
+    animation: cloud-drift 20s linear infinite;
   }
 }

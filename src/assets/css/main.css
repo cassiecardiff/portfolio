@@ -537,11 +537,17 @@
     100% { transform: translateY(-38px); opacity: 0;   }
   }
 
-  .willow-z {
+  .pet-row__item:hover .willow-z,
+  .pet-row__item:focus-within .willow-z,
+  .pet-row__item.is-touch-active .willow-z {
     animation: float-z 2.6s ease-out infinite;
   }
-  .willow-z--2 { animation-delay: 0.87s; }
-  .willow-z--3 { animation-delay: 1.73s; }
+  .pet-row__item:hover .willow-z--2,
+  .pet-row__item:focus-within .willow-z--2,
+  .pet-row__item.is-touch-active .willow-z--2 { animation-delay: 0.87s; }
+  .pet-row__item:hover .willow-z--3,
+  .pet-row__item:focus-within .willow-z--3,
+  .pet-row__item.is-touch-active .willow-z--3 { animation-delay: 1.73s; }
 
   /* ---- Franz: tongue pokes out on hover/touch ---- */
   .franz-tongue {
