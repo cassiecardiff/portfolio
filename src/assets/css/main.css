@@ -543,20 +543,18 @@
   .willow-z--2 { animation-delay: 0.87s; }
   .willow-z--3 { animation-delay: 1.73s; }
 
-  /* ---- Franz: tail swings on hover/touch ---- */
-  @keyframes tail-flap {
-    0%   { transform: rotate(-18deg); }
-    100% { transform: rotate(14deg); }
+  /* ---- Franz: tongue pokes out on hover/touch ---- */
+  .franz-tongue {
+    opacity: 0;
+    transform: translateY(-2px);
+    transition: opacity var(--dur-fast) var(--ease-out),
+                transform var(--dur-fast) var(--ease-out);
   }
 
-  .franz-tail {
-    transform-box: fill-box;
-    transform-origin: left bottom;
-  }
-
-  .pet-row__item:hover .franz-tail,
-  .pet-row__item:focus-within .franz-tail,
-  .pet-row__item.is-touch-active .franz-tail {
-    animation: tail-flap 0.45s ease-in-out infinite alternate;
+  .pet-row__item:hover .franz-tongue,
+  .pet-row__item:focus-within .franz-tongue,
+  .pet-row__item.is-touch-active .franz-tongue {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
