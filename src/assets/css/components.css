@@ -1375,7 +1375,8 @@ a.case-card__tag:hover {
   .hero-plinth { cursor: default; }
 
   /* Case study hero plinth: same lift as the cards */
-  .case-study__hero-plinth:focus-within .float-on-hover {
+  .case-study__hero-plinth:focus-within .float-on-hover,
+  .case-study__hero-plinth.is-touch-active .float-on-hover {
     transform: translateY(-6px);
   }
 
