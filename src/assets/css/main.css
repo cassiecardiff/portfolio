@@ -506,10 +506,15 @@
   .pet-row__item svg {
     transition: transform var(--dur-base) var(--ease-out);
   }
-  .pet-row__item:hover svg,
   .pet-row__item:focus-within svg,
   .pet-row__item.is-touch-active svg {
     transform: translateY(-4px) rotate(-2deg);
+  }
+
+  @media (hover: hover) {
+    .pet-row__item:hover svg {
+      transform: translateY(-4px) rotate(-2deg);
+    }
   }
 
   /* ---- Dinah: tail wags on hover/touch ---- */
@@ -523,10 +528,15 @@
     transform-origin: right bottom;
   }
 
-  .pet-row__item:hover .dinah-tail,
   .pet-row__item:focus-within .dinah-tail,
   .pet-row__item.is-touch-active .dinah-tail {
     animation: tail-wag 0.35s ease-in-out infinite alternate;
+  }
+
+  @media (hover: hover) {
+    .pet-row__item:hover .dinah-tail {
+      animation: tail-wag 0.35s ease-in-out infinite alternate;
+    }
   }
 
   /* ---- Willow: z's float upward in a continuous staggered loop ---- */
@@ -537,17 +547,20 @@
     100% { transform: translateY(-38px); opacity: 0;   }
   }
 
-  .pet-row__item:hover .willow-z,
   .pet-row__item:focus-within .willow-z,
   .pet-row__item.is-touch-active .willow-z {
     animation: float-z 2.6s ease-out infinite;
   }
-  .pet-row__item:hover .willow-z--2,
   .pet-row__item:focus-within .willow-z--2,
   .pet-row__item.is-touch-active .willow-z--2 { animation-delay: 0.87s; }
-  .pet-row__item:hover .willow-z--3,
   .pet-row__item:focus-within .willow-z--3,
   .pet-row__item.is-touch-active .willow-z--3 { animation-delay: 1.73s; }
+
+  @media (hover: hover) {
+    .pet-row__item:hover .willow-z { animation: float-z 2.6s ease-out infinite; }
+    .pet-row__item:hover .willow-z--2 { animation-delay: 0.87s; }
+    .pet-row__item:hover .willow-z--3 { animation-delay: 1.73s; }
+  }
 
   /* ---- Franz: tongue pokes out on hover/touch ---- */
   .franz-tongue {
@@ -557,10 +570,16 @@
                 transform var(--dur-fast) var(--ease-out);
   }
 
-  .pet-row__item:hover .franz-tongue,
   .pet-row__item:focus-within .franz-tongue,
   .pet-row__item.is-touch-active .franz-tongue {
     opacity: 1;
     transform: translateY(0);
+  }
+
+  @media (hover: hover) {
+    .pet-row__item:hover .franz-tongue {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 }
