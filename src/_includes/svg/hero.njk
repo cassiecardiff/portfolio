@@ -11,16 +11,28 @@
       <stop offset="0%" stop-color="#f7f4ee"/>
       <stop offset="100%" stop-color="#e8e1d4"/>
     </linearGradient>
+    <!-- Clips the drifting clouds to the circular sky background -->
+    <clipPath id="sky-clip">
+      <circle cx="225" cy="180" r="170"/>
+    </clipPath>
   </defs>
 
   <!-- Background atmosphere -->
   <circle cx="225" cy="180" r="170" fill="url(#sky)"/>
 
-  <!-- Drifting clouds -->
-  <g class="clouds" opacity="0.75">
-    <ellipse class="cloud" cx="110" cy="100" rx="42" ry="9" fill="#fafaf7"/>
-    <ellipse class="cloud" cx="335" cy="80" rx="55" ry="10" fill="#fafaf7"/>
-    <ellipse class="cloud" cx="245" cy="60" rx="30" ry="6" fill="#fafaf7"/>
+  <!-- Drifting clouds — two identical sets spaced 480 units apart so one is
+       always entering as the other exits. Clipped to the sky circle. -->
+  <g class="clouds" opacity="0.75" clip-path="url(#sky-clip)">
+    <g class="cloud-track">
+      <!-- Set 1: natural positions -->
+      <ellipse cx="110" cy="100" rx="42" ry="9" fill="#fafaf7"/>
+      <ellipse cx="335" cy="80" rx="55" ry="10" fill="#fafaf7"/>
+      <ellipse cx="245" cy="60" rx="30" ry="6" fill="#fafaf7"/>
+      <!-- Set 2: same clouds offset 480 units right for a seamless loop -->
+      <ellipse cx="590" cy="100" rx="42" ry="9" fill="#fafaf7"/>
+      <ellipse cx="815" cy="80" rx="55" ry="10" fill="#fafaf7"/>
+      <ellipse cx="725" cy="60" rx="30" ry="6" fill="#fafaf7"/>
+    </g>
   </g>
 
   <!-- Arch, centred over the three plinths -->

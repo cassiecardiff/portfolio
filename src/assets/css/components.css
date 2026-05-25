@@ -215,8 +215,14 @@
     /* Springy easing with a small overshoot, like a button settling */
     transition: transform 420ms cubic-bezier(0.34, 1.56, 0.64, 1);
   }
-  .hero__statement em:hover {
+  .hero__statement em.is-touch-active {
     transform: translateY(-3px) rotate(-2.5deg);
+  }
+
+  @media (hover: hover) {
+    .hero__statement em:hover {
+      transform: translateY(-3px) rotate(-2.5deg);
+    }
   }
 }
 
@@ -658,15 +664,26 @@
   z-index: -1;
 }
 
-.case-card:hover,
 .case-card:focus-visible {
   transform: translateY(-2px);
   box-shadow: var(--shadow-lift);
 }
 
-.case-card:hover::before,
+@media (hover: hover) {
+  .case-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lift);
+  }
+}
+
 .case-card:focus-visible::before {
   opacity: 1;
+}
+
+@media (hover: hover) {
+  .case-card:hover::before {
+    opacity: 1;
+  }
 }
 
 .case-card__plinth {
@@ -694,9 +711,14 @@
   transition: color var(--dur-fast) var(--ease-out);
 }
 
-.case-card:hover .case-card__title,
 .case-card:focus-visible .case-card__title {
   color: var(--rose-deep);
+}
+
+@media (hover: hover) {
+  .case-card:hover .case-card__title {
+    color: var(--rose-deep);
+  }
 }
 
 .case-card__summary {
@@ -843,10 +865,17 @@ a.case-card__tag:hover {
     filter var(--dur-base) var(--ease-out);
 }
 
-.logo-band__item:hover .logo-band__img,
-.logo-band__item:focus-within .logo-band__img {
+.logo-band__item:focus-within .logo-band__img,
+.logo-band__item.is-touch-active .logo-band__img {
   filter: none;
   opacity: 1;
+}
+
+@media (hover: hover) {
+  .logo-band__item:hover .logo-band__img {
+    filter: none;
+    opacity: 1;
+  }
 }
 
 /* Fallback for any logo without a file: render the name in body sans */
@@ -1322,21 +1351,38 @@ a.case-card__tag:hover {
     transition: transform var(--dur-slow) var(--ease-in-out);
     transform-origin: center bottom;
   }
-  .case-card:hover .float-on-hover,
   .case-card:focus-visible .float-on-hover {
     transform: translateY(-6px);
   }
+
+  @media (hover: hover) {
+    .case-card:hover .float-on-hover {
+      transform: translateY(-6px);
+    }
+  }
+
   /* Hero plinths: each plinth animates its object on hover individually */
-  .hero-plinth:hover .float-on-hover,
   .hero-plinth:focus-within .float-on-hover {
     transform: translateY(-8px);
   }
+
+  @media (hover: hover) {
+    .hero-plinth:hover .float-on-hover {
+      transform: translateY(-8px);
+    }
+  }
+
   .hero-plinth { cursor: default; }
 
   /* Case study hero plinth: same lift as the cards */
-  .case-study__hero-plinth:hover .float-on-hover,
   .case-study__hero-plinth:focus-within .float-on-hover {
     transform: translateY(-6px);
+  }
+
+  @media (hover: hover) {
+    .case-study__hero-plinth:hover .float-on-hover {
+      transform: translateY(-6px);
+    }
   }
 
   .sway {
@@ -1348,20 +1394,15 @@ a.case-card__tag:hover {
     100% { transform: rotate(0.6deg); }
   }
 
-  /* Clouds drift gently when the user hovers the hero illustration */
-  .cloud {
-    transition: transform 1.4s cubic-bezier(0.22, 1, 0.36, 1);
+  /* Clouds drift continuously from right to left in a seamless loop.
+     The SVG uses two cloud sets spaced 480 units apart; the animation
+     moves them together so one set is always visible in the sky circle. */
+  @keyframes cloud-drift {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-480px); }
   }
-  .hero__illustration:hover .cloud:nth-of-type(1),
-  .hero__illustration:focus-within .cloud:nth-of-type(1) {
-    transform: translate(10px, -4px);
-  }
-  .hero__illustration:hover .cloud:nth-of-type(2),
-  .hero__illustration:focus-within .cloud:nth-of-type(2) {
-    transform: translate(-7px, -2px);
-  }
-  .hero__illustration:hover .cloud:nth-of-type(3),
-  .hero__illustration:focus-within .cloud:nth-of-type(3) {
-    transform: translate(5px, -5px);
+
+  .cloud-track {
+    animation: cloud-drift 20s linear infinite;
   }
 }

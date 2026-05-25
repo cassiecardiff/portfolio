@@ -22,8 +22,7 @@
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
-# Anyone arriving on the old domain lands on a small "name changed" splash
-# page before being sent on to the new homepage.
+# Anyone arriving on the old domain lands on the welcome/name-change page.
 [[redirects]]
   from = "https://cassandracardiff.com/*"
   to = "https://casschristodolo.com/welcome/"

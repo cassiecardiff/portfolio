@@ -3,7 +3,7 @@
     <h2 id="logo-wall-heading" class="logo-band__title">A few organisations I've worked with</h2>
     <ul class="logo-band__grid unstyled-list" role="list">
       {% for logo in logos %}
-        <li class="logo-band__item" style="--logo-scale: {{ logo.scale or 1 }};">
+        <li class="logo-band__item" style="--logo-scale: {{ logo.scale or 1 }};" data-touch-toggle data-touch-toggle-group="logo">
           {% if logo.file %}
             <img src="/assets/img/logos/{{ logo.file }}" alt="{{ logo.name }} logo" loading="lazy" class="logo-band__img">
           {% else %}

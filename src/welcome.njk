@@ -30,22 +30,3 @@ eleventyExcludeFromCollections: true
     <a href="/" class="welcome__link">Continue to my site &rarr;</a>
   </p>
 </section>
-
-<script>
-  // Auto-forward to the homepage after the animation has finished.
-  // Skipped if the visitor prefers reduced motion or clicks the link first.
-  (function () {
-    const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    const delay = prefersReduced ? 3000 : 12000;
-    let cancelled = false;
-
-    const link = document.querySelector(".welcome__link");
-    if (link) {
-      link.addEventListener("click", () => { cancelled = true; });
-    }
-
-    setTimeout(() => {
-      if (!cancelled) window.location.replace("/");
-    }, delay);
-  })();
-</script>
