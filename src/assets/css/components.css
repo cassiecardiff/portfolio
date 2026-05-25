@@ -1394,16 +1394,24 @@ a.case-card__tag:hover {
     100% { transform: rotate(0.6deg); }
   }
 
-  /* Clouds drift on hover or tap. No animation defined by default so
-     they stop cleanly when the interaction ends. */
+  /* Clouds pause in place when not hovered. Longhand properties avoid the
+     animation shorthand implicitly resetting play-state to running. */
   @keyframes cloud-drift {
     from { transform: translateX(0); }
     to   { transform: translateX(-480px); }
   }
 
+  .cloud-track {
+    animation-name: cloud-drift;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-play-state: paused;
+  }
+
   .hero__illustration:hover .cloud-track,
   .hero__illustration:focus-within .cloud-track,
   .hero__illustration.is-touch-active .cloud-track {
-    animation: cloud-drift 20s linear infinite;
+    animation-play-state: running;
   }
 }
