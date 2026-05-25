@@ -507,7 +507,63 @@
     transition: transform var(--dur-base) var(--ease-out);
   }
   .pet-row__item:hover svg,
-  .pet-row__item:focus-within svg {
+  .pet-row__item:focus-within svg,
+  .pet-row__item.is-touch-active svg {
     transform: translateY(-4px) rotate(-2deg);
+  }
+
+  /* ---- Dinah: bark waves pulse outward on hover/touch ---- */
+  @keyframes bark-pulse {
+    0%, 100% { opacity: 0; }
+    30%, 70%  { opacity: 0.85; }
+  }
+
+  .pet-row__item:hover .dinah-bw,
+  .pet-row__item:focus-within .dinah-bw,
+  .pet-row__item.is-touch-active .dinah-bw {
+    animation: bark-pulse 0.9s ease-in-out infinite;
+  }
+
+  .pet-row__item:hover .dinah-bw-2,
+  .pet-row__item:focus-within .dinah-bw-2,
+  .pet-row__item.is-touch-active .dinah-bw-2 {
+    animation-delay: 0.18s;
+  }
+
+  .pet-row__item:hover .dinah-bw-3,
+  .pet-row__item:focus-within .dinah-bw-3,
+  .pet-row__item.is-touch-active .dinah-bw-3 {
+    animation-delay: 0.36s;
+  }
+
+  /* ---- Willow: z's float upward in a continuous staggered loop ---- */
+  @keyframes float-z {
+    0%   { transform: translateY(0);     opacity: 0;   }
+    12%  { opacity: 0.75; }
+    85%  { opacity: 0.7;  }
+    100% { transform: translateY(-38px); opacity: 0;   }
+  }
+
+  .willow-z {
+    animation: float-z 2.6s ease-out infinite;
+  }
+  .willow-z--2 { animation-delay: 0.87s; }
+  .willow-z--3 { animation-delay: 1.73s; }
+
+  /* ---- Franz: tail swings on hover/touch ---- */
+  @keyframes tail-flap {
+    0%   { transform: rotate(-18deg); }
+    100% { transform: rotate(14deg); }
+  }
+
+  .franz-tail {
+    transform-box: fill-box;
+    transform-origin: left bottom;
+  }
+
+  .pet-row__item:hover .franz-tail,
+  .pet-row__item:focus-within .franz-tail,
+  .pet-row__item.is-touch-active .franz-tail {
+    animation: tail-flap 0.45s ease-in-out infinite alternate;
   }
 }

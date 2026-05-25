@@ -25,8 +25,10 @@
     <path d="M70 40 L74 48" opacity="0.5"/>
     <path d="M80 38 L80 48" opacity="0.5"/>
     <path d="M90 40 L86 48" opacity="0.5"/>
-    <!-- tail -->
-    <path d="M105 125 Q130 120 125 95" fill="none"/>
+    <!-- tail — wrapped in a group so the CSS can swing it from its base -->
+    <g class="franz-tail">
+      <path d="M105 125 Q130 120 125 95" fill="none"/>
+    </g>
     <!-- paws -->
     <ellipse cx="65" cy="135" rx="8" ry="4" fill="#f4efe6"/>
     <ellipse cx="95" cy="135" rx="8" ry="4" fill="#f4efe6"/>
