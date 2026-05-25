@@ -8,7 +8,7 @@ module.exports = [
   { name: "Mind", file: "mind.png", scale: 2.4 },
   { name: "Guy's and St Thomas' NHS Foundation Trust", file: "gstt.png", scale: 1.0 },
   { name: "Oxfam", file: "oxfam.png", scale: 0.7 },
-  { name: "Breast Cancer Now", file: "breast-cancer-now.png", scale: 1.1 },
+  { name: "Breast Cancer Now", file: "breast-cancer-now.png", scale: 0.85 },
   { name: "Amnesty International", file: "amnesty-international.png", scale: 0.85 },
   { name: "National Institutes of Health", file: "nih.png", scale: 1.0 },
   { name: "NASA JPL", file: "nasa-jpl.png", scale: 1.0 }
