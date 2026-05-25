@@ -512,28 +512,21 @@
     transform: translateY(-4px) rotate(-2deg);
   }
 
-  /* ---- Dinah: bark waves pulse outward on hover/touch ---- */
-  @keyframes bark-pulse {
-    0%, 100% { opacity: 0; }
-    30%, 70%  { opacity: 0.85; }
+  /* ---- Dinah: tail wags on hover/touch ---- */
+  @keyframes tail-wag {
+    0%   { transform: rotate(-20deg); }
+    100% { transform: rotate(15deg); }
   }
 
-  .pet-row__item:hover .dinah-bw,
-  .pet-row__item:focus-within .dinah-bw,
-  .pet-row__item.is-touch-active .dinah-bw {
-    animation: bark-pulse 0.9s ease-in-out infinite;
+  .dinah-tail {
+    transform-box: fill-box;
+    transform-origin: right bottom;
   }
 
-  .pet-row__item:hover .dinah-bw-2,
-  .pet-row__item:focus-within .dinah-bw-2,
-  .pet-row__item.is-touch-active .dinah-bw-2 {
-    animation-delay: 0.18s;
-  }
-
-  .pet-row__item:hover .dinah-bw-3,
-  .pet-row__item:focus-within .dinah-bw-3,
-  .pet-row__item.is-touch-active .dinah-bw-3 {
-    animation-delay: 0.36s;
+  .pet-row__item:hover .dinah-tail,
+  .pet-row__item:focus-within .dinah-tail,
+  .pet-row__item.is-touch-active .dinah-tail {
+    animation: tail-wag 0.35s ease-in-out infinite alternate;
   }
 
   /* ---- Willow: z's float upward in a continuous staggered loop ---- */
