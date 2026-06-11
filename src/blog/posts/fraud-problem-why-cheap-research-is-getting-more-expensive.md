@@ -6,7 +6,6 @@ tags:
   - post
   - AI
   - Research methods
-  - Public sector
 ---
 
 <figure class="post-figure">
