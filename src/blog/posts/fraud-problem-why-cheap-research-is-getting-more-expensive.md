@@ -10,7 +10,7 @@ tags:
 ---
 
 <figure class="post-figure">
-  <img src="/assets/img/blog/cassie-zoom.jpg" alt="Cassie on a Zoom call, hand raised mid-gesture, looking incredulous" />
+  <img src="/assets/img/blog/cassie-zoom.png" alt="Cassie on a Zoom call, hand raised mid-gesture, looking incredulous" />
   <figcaption>Me, once again, flabberghasted by a participant on Zoom.</figcaption>
 </figure>
 

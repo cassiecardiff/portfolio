@@ -1186,6 +1186,12 @@ a.case-card__tag:hover {
   color: var(--ink);
 }
 
+/* Blog posts have longer h2s that wrap badly at step-1 — bring them down a size */
+.post-body h2 {
+  font-size: var(--step-0);
+  font-weight: 700;
+}
+
 .case-study__section p {
   font-size: var(--step-0);
   line-height: 1.7;
@@ -1246,6 +1252,29 @@ a.case-card__tag:hover {
 }
 
 .case-study__caption {
+  display: block;
+  margin-top: var(--space-2xs);
+  font-size: 0.8125rem;
+  color: var(--ink-soft);
+  line-height: 1.5;
+  font-style: italic;
+}
+
+/* Blog post inline figure/photo */
+.post-figure {
+  margin: var(--space-l) 0;
+}
+
+.post-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-m);
+  border: 1px solid var(--rule);
+  background: var(--cloud);
+}
+
+.post-figure figcaption {
   display: block;
   margin-top: var(--space-2xs);
   font-size: 0.8125rem;
