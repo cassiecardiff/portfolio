@@ -1261,11 +1261,11 @@ a.case-card__tag:hover {
 }
 
 /* Blog post inline figure/photo */
-.post-figure {
-  margin: var(--space-l) 0;
+.post-body .post-figure {
+  margin: var(--space-l) 0 var(--space-xl);
 }
 
-.post-figure img {
+.post-body .post-figure img {
   display: block;
   width: 100%;
   height: auto;
@@ -1274,10 +1274,10 @@ a.case-card__tag:hover {
   background: var(--cloud);
 }
 
-.post-figure figcaption {
+.post-body .post-figure figcaption {
   display: block;
   margin-top: var(--space-2xs);
-  font-size: 0.8125rem;
+  font-size: var(--step--1);
   color: var(--ink-soft);
   line-height: 1.5;
   font-style: italic;
