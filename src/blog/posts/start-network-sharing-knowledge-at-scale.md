@@ -5,7 +5,7 @@ summary: Insights from research with Start Network on knowledge sharing, digital
 tags:
   - post
   - Charity sector
-  - Qualitative research
+  - Mixed methods
   - Discovery research
 externalUrl: https://torchbox.com/charity/blog/start-network-sharing-knowledge-at-scale/
 ---
