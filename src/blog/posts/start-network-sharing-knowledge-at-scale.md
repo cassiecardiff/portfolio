@@ -26,14 +26,10 @@ One of the clearest themes in the research was the importance of making knowledg
 Across the network, Skype played an important role in day-to-day communication, particularly for quick updates and coordination. But participants also described how the volume and pace of messages could make it difficult to identify the information that really mattered.
 
 > [When] there's a training going on… you get 140 messages, and you're like 'is there a massive crisis going on?'... no, it's just an update [in the Skype channel].
->
-> Anonymous participant
 
 Valuable insights, case studies and learnings existed across the network, but were often spread across different tools, conversations and individuals.
 
 > There are many things happening in many parts of the world, but they're kind of fragmented… they're not yet put together in such a way that could create a really strong [information base].
->
-> Anonymous participant
 
 This points to a wider lesson for organisations working in fast-moving environments. Conversation is essential, but it does not automatically create shared knowledge. If important information lives inside busy threads or scattered sources, it becomes much harder to access and apply in the moments that matter.
 
@@ -48,14 +44,10 @@ Another strong finding was that communication habits varied widely depending on 
 Participants in the Global South described relying heavily on mobile devices and messaging apps, often moving between tools like WhatsApp, Viber and Telegram depending on need.
 
 > Mostly I use the phone… sometimes I use the desktop or the laptop.
->
-> Anonymous participant
 
 Participants in the UK, by contrast, tended to prefer desktop-based tools and more formal channels, often because they did not have dedicated work phones and wanted clearer boundaries between work and personal life.
 
 > I would not opt into a WhatsApp group… I don't have a work phone… it would mean that our private phones would just constantly blow up with messages.
->
-> Anonymous participant
 
 The research highlights a tension many organisations will recognise when working across regions. This is especially important when you consider device access and connectivity. During emergencies, communication may be restricted to SMS and satellite phones, which means essential messages need to be accessible offline and in text-based formats.
 
@@ -68,8 +60,6 @@ Despite the wide range of tools in use, one channel stood out as universal.
 Email emerged as the only consistently used communication tool across participants and regions. It was seen as reliable, appropriate for formal updates, and accessible in a way that other tools were not always able to match.
 
 > We are communicating very smoothly through emails with our donors.
->
-> Anonymous participant
 
 While it may not be the most innovative tool, its consistency makes it an important foundation for communication strategies. This is a useful lesson for organisations thinking about collaboration and engagement. Newer tools do not always replace older ones. In distributed networks especially, consistency and shared understanding often matter more than novelty.
 
@@ -80,8 +70,6 @@ The research also highlighted the importance of making it easier for people acro
 Several participants said a membership directory would be highly valuable, particularly when they needed to connect with people in specific countries or organisations and did not already know them personally.
 
 > [It would be great] to know the Start Network colleagues that are in-country that we can reach out to, who maybe have more in-depth information rather than having to go through the HQ level.
->
-> Anonymous participant
 
 In many organisations, collaboration depends heavily on existing relationships. That works up to a point, but it becomes harder to sustain as networks grow. Providing a clear view of who is in the network, what they do, and how to reach them can make a significant difference. For organisations working across partnerships, regions or communities of practice, this is a helpful takeaway: knowledge sharing is not only about content, it is also about helping people find the right person quickly.
 
@@ -92,8 +80,6 @@ The research also surfaced an important point about adoption.
 Start Network's existing member portal was designed to support collaboration and resource sharing, but participants described varied levels of awareness and usage. Some were unaware of it, while others relied on colleagues to use it on their behalf.
 
 > I'm not using the [member portal]... one of our assigned colleagues [is] responsible [for that].
->
-> Anonymous participant
 
 Where it was used, it was mainly for specific tasks such as accessing training or updating organisational details, rather than acting as a central hub for collaboration.
 
