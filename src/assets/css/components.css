@@ -1186,6 +1186,22 @@ a.case-card__tag:hover {
   color: var(--ink);
 }
 
+/* Blog post list spacing */
+.post-body ul,
+.post-body ol {
+  margin: var(--space-m) 0;
+  padding-left: var(--space-m);
+}
+
+.post-body li {
+  margin-bottom: var(--space-xs);
+  line-height: 1.7;
+}
+
+.post-body li:last-child {
+  margin-bottom: 0;
+}
+
 /* Blog posts have longer h2s that wrap badly at step-1 — bring them down a size */
 .post-body h2 {
   font-size: var(--step-0);
