@@ -1,5 +1,5 @@
 ---
-title: "The Smart Glasses Panic"
+title: "The smart glasses panic"
 date: 2026-08-05
 summary: "The fear of smart glasses as a category is disproportionate. Conflating specific abuses with the utility of the technology is a massive mistake."
 tags:
@@ -7,7 +7,7 @@ tags:
   - AI
 ---
 
-"It is my opinion, without any reasonable doubt, and without any reservation, that <del>comic books</del> smart glasses are an important contributing factor in many cases of juvenile delinquency."
+> "It is my opinion, without any reasonable doubt, and without any reservation, that <del>comic books</del> smart glasses are an important contributing factor in many cases of juvenile delinquency."
 
 Take out the strikethrough and that's the actual testimony a psychiatrist gave the US Senate about comic books in 1954, the same year the Comics Code Authority was invented to save America's children from Batman. The target changed, but the sentence barely needs editing.
 
