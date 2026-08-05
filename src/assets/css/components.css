@@ -1186,6 +1186,13 @@ a.case-card__tag:hover {
   color: var(--ink);
 }
 
+/* Blog post blockquotes — suppress the auto-added quote marks since
+   the source text already contains its own quotation marks */
+.post-body blockquote p::before,
+.post-body blockquote p::after {
+  content: none;
+}
+
 /* Blog post list spacing */
 .post-body ul,
 .post-body ol {
