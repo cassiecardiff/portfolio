@@ -21,11 +21,15 @@ layout: layouts/base.njk
           {% include "svg/plinth-building.njk" %}
         {% elif plinthObject == "thistle" %}
           {% include "svg/plinth-thistle.njk" %}
+        {% elif plinthObject == "mic" %}
+          {% include "svg/plinth-mic.njk" %}
+        {% elif plinthObject == "owl" %}
+          {% include "svg/plinth-owl.njk" %}
         {% endif %}
       </div>
     {% endif %}
 
-    <span class="eyebrow">Case study</span>
+    <span class="eyebrow">{{ eyebrow or "Case study" }}</span>
     <h1 class="case-study__title">{{ title }}</h1>
     <ul class="case-study__tags unstyled-list">
       {% for tag in tags %}

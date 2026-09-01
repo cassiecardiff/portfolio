@@ -3,6 +3,20 @@
 
 module.exports = [
   {
+    slug: "sonar",
+    title: "Sonar",
+    summary: "An AI interviewer I co-founded at Torchbox, built to reach the people traditional research can't.",
+    plinthObject: "mic",
+    tags: ["AI", "Public sector", "Research at scale"]
+  },
+  {
+    slug: "ai-evals",
+    title: "Structured evals for AI-assisted research",
+    summary: "A structured way to run human evals on AI products, built because usability testing alone isn't enough.",
+    plinthObject: "owl",
+    tags: ["AI", "Research operations"]
+  },
+  {
     slug: "amnesty",
     title: "Amnesty International UK",
     summary: "Discovery research that reshaped how one of the world's largest human rights organisations thinks about its digital ecosystem.",
@@ -17,14 +31,6 @@ module.exports = [
     locked: true,
     plinthObject: "dog",
     tags: ["Service design", "Charity sector", "Accessible research"]
-  },
-  {
-    slug: "gstt",
-    title: "Guy's and St Thomas' NHS Foundation Trust",
-    summary: "Discovery research for 23,000 NHS staff, including the people traditional methods never reach.",
-    locked: true,
-    plinthObject: "cross",
-    tags: ["AI", "Public sector", "Research at scale", "Qualitative research"]
   },
   {
     slug: "start-network",

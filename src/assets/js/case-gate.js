@@ -11,9 +11,12 @@
   const STORAGE_KEY = "case-study-unlocked";
   const PASSWORD_HASH = "318456e6b514309c407799b73381b28129a60103e6740c91582dddb5cea72699";
 
-  // Only run on a case study page (URLs like /work/amnesty/).
+  // Only run on a locked case study page. Client work stays gated;
+  // my own projects (Sonar, AI evals) live at /work/ unlocked.
+  const LOCKED_SLUGS = ["amnesty", "hearing-dogs", "gstt", "start-network", "london-museum", "nms"];
   const path = window.location.pathname;
-  if (!/^\/work\/[^/]+\/?$/.test(path)) return;
+  const pathMatch = path.match(/^\/work\/([^/]+)\/?$/);
+  if (!pathMatch || !LOCKED_SLUGS.includes(pathMatch[1])) return;
 
   const article = document.querySelector(".case-study");
   if (!article) return;
