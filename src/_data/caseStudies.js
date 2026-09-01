@@ -41,14 +41,6 @@ module.exports = [
     tags: ["Mixed methods", "Charity sector", "Discovery research"]
   },
   {
-    slug: "london-museum",
-    title: "London Museum",
-    summary: "Accessibility testing with assistive tech users before a major website launch.",
-    locked: true,
-    plinthObject: "building",
-    tags: ["Cultural sector", "Usability testing", "Accessible research"]
-  },
-  {
     slug: "nms",
     title: "National Museum of Scotland",
     summary: "Observational research across 747 visitor encounters to inform a new digital interactives strategy.",
