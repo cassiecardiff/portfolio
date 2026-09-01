@@ -15,8 +15,8 @@
       {% include "svg/plinth-thistle.njk" %}
     {% elif study.plinthObject == "mic" %}
       {% include "svg/plinth-mic.njk" %}
-    {% elif study.plinthObject == "owl" %}
-      {% include "svg/plinth-owl.njk" %}
+    {% elif study.plinthObject == "magnifier" %}
+      {% include "svg/plinth-magnifier.njk" %}
     {% else %}
       {% include "svg/plinth.njk" %}
     {% endif %}
@@ -34,6 +34,8 @@
       {% include "svg/lock.njk" %}
       Password protected
     </span>
+  {% else %}
+    <span class="case-card__lock" aria-hidden="true"></span>
   {% endif %}
 
   <ul class="case-card__tags unstyled-list" aria-label="Tags">

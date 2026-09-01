@@ -4,16 +4,16 @@
 module.exports = [
   {
     slug: "sonar",
-    title: "Sonar",
+    title: "AI Interviews",
     summary: "An AI interviewer I co-founded at Torchbox, built to reach the people traditional research can't.",
     plinthObject: "mic",
     tags: ["AI", "Public sector", "Research at scale"]
   },
   {
     slug: "ai-evals",
-    title: "Structured evals for AI-assisted research",
+    title: "Human evals for AI",
     summary: "A structured way to run human evals on AI products, built because usability testing alone isn't enough.",
-    plinthObject: "owl",
+    plinthObject: "magnifier",
     tags: ["AI", "Research operations"]
   },
   {
