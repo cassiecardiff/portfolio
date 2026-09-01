@@ -6,3 +6,5 @@ Disallow: /work/gstt/
 Disallow: /work/start-network/
 Disallow: /work/london-museum/
 Disallow: /work/nms/
+
+Sitemap: https://casschristodolo.com/sitemap.xml
