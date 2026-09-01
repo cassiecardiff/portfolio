@@ -37,7 +37,7 @@ eleventyComputed:
           "title": item.data.title,
           "summary": item.data.summary,
           "plinthObject": item.data.plinthObject,
-          "locked": true,
+          "locked": item.data.locked,
           "tags": item.data.tags
         } %}
         {% include "partials/case-card.njk" %}
