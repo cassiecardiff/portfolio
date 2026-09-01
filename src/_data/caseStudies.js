@@ -4,7 +4,7 @@
 module.exports = [
   {
     slug: "sonar",
-    title: "AI-moderated interviewer",
+    title: "AI-moderated interviews",
     summary: "An AI interviewer I co-founded at Torchbox, built to reach the people traditional research can't.",
     plinthObject: "mic",
     tags: ["AI", "Research at scale", "Research operations"]
