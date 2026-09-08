@@ -8,8 +8,6 @@ tags:
   - Research methods
 ---
 
-*Originally published on the [Torchbox blog](https://torchbox.com/news/when-ai-becomes-the-front-door-to-your-website/).*
-
 Imagine you're thinking about setting up a small charity. You open Google, type your question and an answer appears before you've even clicked a result. It tells you it costs £13 to register online. You make a note and move on.
 
 Except it's wrong.
